@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)" fill="none" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left mask (comedy) -->
+    <path d="M14,18 Q10,30 16,40 Q20,44 26,40 Q32,30 28,18 Q24,14 14,18Z" fill="#FFD1DC" fill-opacity="0.2"/>
+    <!-- right mask (tragedy) -->
+    <path d="M46,18 Q50,30 44,40 Q40,44 34,40 Q28,30 32,18 Q36,14 46,18Z" fill="#FFF5E6" fill-opacity="0.2"/>
+    <!-- left eye -->
+    <ellipse cx="18" cy="26" rx="2.5" ry="3" fill="#FF6B8A" opacity="0.3"/>
+    <!-- right eye -->
+    <ellipse cx="42" cy="26" rx="2.5" ry="3" fill="#FF6B8A" opacity="0.3"/>
+    <!-- smile (comedy) -->
+    <path d="M16,32 Q20,37 24,32" stroke="#F5B700" stroke-width="2"/>
+    <!-- frown (tragedy) -->
+    <path d="M36,34 Q40,31 44,34" stroke="#F5B700" stroke-width="2"/>
+    <!-- masks connection -->
+    <path d="M28,36 Q30,40 32,36" stroke="#FF8FAB" stroke-width="1.5"/>
+  </g>
+</svg>

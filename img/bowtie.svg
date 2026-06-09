@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)">
+    <!-- left wing -->
+    <path d="M30,15 Q20,5 8,8 Q12,15 8,22 Q20,25 30,15Z" 
+          fill="#F5B700" stroke="#E6A100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- right wing -->
+    <path d="M30,15 Q40,5 52,8 Q48,15 52,22 Q40,25 30,15Z" 
+          fill="#F5B700" stroke="#E6A100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- center knot -->
+    <ellipse cx="30" cy="15" rx="5" ry="4" fill="#E6A100" stroke="#D94A6A" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>

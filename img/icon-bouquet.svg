@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)">
+    <!-- bouquet: overlapping circles as flowers -->
+    <circle cx="26" cy="28" r="10" fill="#FF6B8A" fill-opacity="0.2" stroke="#FF6B8A" stroke-width="2"/>
+    <circle cx="34" cy="26" r="10" fill="#F5B700" fill-opacity="0.2" stroke="#F5B700" stroke-width="2"/>
+    <circle cx="30" cy="18" r="10" fill="#FF8FAB" fill-opacity="0.2" stroke="#FF6B8A" stroke-width="2.5"/>
+    <!-- center of flowers -->
+    <circle cx="30" cy="18" r="3" fill="#F5B700" opacity="0.6"/>
+    <circle cx="26" cy="28" r="3" fill="#FF6B8A" opacity="0.5"/>
+    <circle cx="34" cy="26" r="3" fill="#F5B700" opacity="0.5"/>
+    <!-- small accent dots -->
+    <circle cx="22" cy="22" r="2" fill="#FFD54F" opacity="0.5"/>
+    <circle cx="38" cy="20" r="2" fill="#FFD54F" opacity="0.5"/>
+    <circle cx="28" cy="14" r="1.5" fill="#FFF" opacity="0.4"/>
+    <!-- stems -->
+    <line x1="26" y1="36" x2="24" y2="52" stroke="#8BC34A" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+    <line x1="34" y1="34" x2="36" y2="52" stroke="#8BC34A" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+    <line x1="30" y1="28" x2="30" y2="52" stroke="#8BC34A" stroke-width="2.5" opacity="0.5" stroke-linecap="round"/>
+    <!-- ribbon -->
+    <path d="M24,48 Q30,50 36,48" fill="none" stroke="#FF6B8A" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Катя & Паша | Свадьба · 4 июля 2026</title>
+  <meta name="description" content="Свадьба Кати и Паши Коршиковых. 4 июля 2026, Бар Stoy, Москва.">
+
+  <!-- Preconnect & prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://www.openstreetmap.org">
+
+  <!-- Preload critical CSS -->
+  <link rel="preload" href="css/style.css" as="style" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts (non-blocking) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap"></noscript>
+
+  <!-- Inline loader styles -->
+  <style>
+    .page-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: #FFF8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .page-loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .loader-heart {
+      width: 60px;
+      height: 55px;
+      animation: pulse-loader 1.2s ease-in-out infinite;
+    }
+    .loader-heart path {
+      fill: none;
+      stroke: #FF6B8A;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    @keyframes pulse-loader {
+      0%, 100% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+    .loader-text {
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: #FF6B8A;
+      margin-top: 16px;
+      opacity: 0.7;
+    }
+  </style>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>💛</text></svg>" type="image/svg+xml">
+</head>
+<body>
+
+  <!-- ===== Page Loader ===== -->
+  <div class="page-loader" id="pageLoader">
+    <svg class="loader-heart" viewBox="0 0 60 55" aria-hidden="true">
+      <path d="M30,52 C14,39 2.5,29 2.5,18 C2.5,9 9,2.5 18,2.5 C23,2.5 27,5.5 30,10 C33,5.5 37,2.5 42,2.5 C51,2.5 57.5,9 57.5,18 C57.5,29 46,39 30,52Z"/>
+    </svg>
+    <div class="loader-text">Катя &amp; Паша</div>
+  </div>
+
+  <!-- ===== SVG Definitions ===== -->
+  <svg style="display:none;" aria-hidden="true">
+    <defs>
+      <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-heavy" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="nav" aria-label="Навигация">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">К &amp; П</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#schedule">Расписание</a></li>
+        <li><a href="#format">Формат</a></li>
+        <li><a href="#open-mic">Открытый микрофон</a></li>
+        <li><a href="#map">Карта</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <div class="hero-petal petal-1"></div>
+      <div class="hero-petal petal-2"></div>
+    </div>
+    <div class="hero-content">
+      <img src="img/flower.svg" alt="" class="hero-flower" width="80" height="80" fetchpriority="high">
+      <p class="hero-invite">Приглашаем вас разделить с нами праздник нашей любви</p>
+      <h1 class="hero-names">
+        <span class="name name-left">Катя</span>
+        <span class="ampersand">&amp;</span>
+        <span class="name name-right">Паша</span>
+      </h1>
+      <p class="hero-surname">Коршиковы</p>
+      <div class="hero-divider">
+        <svg viewBox="0 0 120 12" width="120" height="12" aria-hidden="true">
+          <path d="M0,6 Q15,0 30,6 Q45,12 60,6 Q75,0 90,6 Q105,12 120,6" fill="none" stroke="#FF6B8A" stroke-width="2" stroke-linecap="round" filter="url(#rough)" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="hero-details">
+        <p class="hero-date">4 июля 2026</p>
+        <p class="hero-venue"><a href="#map" class="hero-venue-link">Бар Stoy, Москва</a></p>
+      </div>
+      <!-- Countdown -->
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-num" id="days">00</span>
+          <span class="countdown-label">дней</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="hours">00</span>
+          <span class="countdown-label">часов</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="minutes">00</span>
+          <span class="countdown-label">минут</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span class="countdown-num" id="seconds">00</span>
+          <span class="countdown-label">секунд</span>
+        </div>
+      </div>
+      <a href="#schedule" class="scroll-hint" aria-label="Листать ниже">
+        <span class="scroll-text">Листайте</span>
+        <span class="scroll-arrow">↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section id="schedule" class="section section-yellow">
+    <div class="section-inner">
+      <div class="section-icon">
+        <img src="img/squiggle.svg" alt="" width="60" height="30" loading="lazy">
+      </div>
+      <h2 class="section-title">Расписание дня</h2>
+      <img src="img/divider.svg" alt="" class="section-divider" width="240" height="24" loading="lazy">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-time">17:00</span>
+            <span class="timeline-event">Сбор гостей, фуршет, нетворкинг</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-time">17:30</span>
+            <span class="timeline-event">Начало вечера</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-time">18:00</span>
+            <span class="timeline-event">Открытый микрофон</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-time">19:30</span>
+            <span class="timeline-event">Вечеринка и свободное общение, ленивое продолжение открытого микрофона</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-time">22:00</span>
+            <span class="timeline-event">Афтепати <span class="timeline-note">(скорее всего, к этому времени мы уже выпьем и съедим всё, что можно, но мы будем рады приятному общению с вами)</span></span>
+          </div>
+        </div>
+      </div>
+      <p class="schedule-note">Расписание может корректироваться — следите за обновлениями!</p>
+    </div>
+  </section>
+
+  <!-- ===== FORMAT ===== -->
+  <section id="format" class="section section-pink">
+    <div class="section-inner section-inner--wide">
+      <div class="section-icon">
+        <img src="img/squiggle.svg" alt="" width="60" height="30" loading="lazy">
+      </div>
+      <h2 class="section-title">Формат вечера</h2>
+      <img src="img/divider.svg" alt="" class="section-divider" width="240" height="24" loading="lazy">
+      <div class="format-grid">
+        <div class="format-card">
+          <div class="format-emoji"><img src="img/icon-mic.svg" alt="" class="format-emoji-img" width="52" height="52" loading="lazy"></div>
+          <h3 class="format-title">Открытый микрофон</h3>
+          <p class="format-text">Главное блюдо вечера — ваши выступления! Готовьте стихи, песни, тосты, фокусы, сценки и всё, на что хватит фантазии. <a href="#open-mic" class="format-link-inline">Подробности в следующем разделе →</a></p>
+        </div>
+        <div class="format-card">
+          <div class="format-emoji"><img src="img/icon-dress.svg" alt="" class="format-emoji-img" width="52" height="52" loading="lazy"></div>
+          <h3 class="format-title">Дресс-код</h3>
+          <p class="format-text">Нам хочется, чтобы вы чувствовали себя максимально комфортно, и мы совсем не хотим ставить вас в рамки. Поэтому предлагаем дресс-код <strong>«Мне некуда это надеть»</strong> — выгуливайте свои самые безбашенные наряды!</p>
+        </div>
+        <div class="format-card">
+          <div class="format-emoji"><img src="img/icon-bouquet.svg" alt="" class="format-emoji-img" width="52" height="52" loading="lazy"></div>
+          <h3 class="format-title">Цветы</h3>
+          <p class="format-text">Мы решили отказаться от цветов. Но если вам хочется проявить внимание по-особенному, мы с удовольствием примем акцию.</p>
+          <p class="format-text format-ps">Реквизиты: <a href="tel:+79670663077" class="format-link format-link--inline">+7 967 066 30 77</a></p>
+          <p class="format-text"><a href="https://www.tbank.ru/finance/blog/present-shares/" target="_blank" rel="noopener" class="format-link">Как подарить акцию →</a></p>
+        </div>
+        <div class="format-card">
+          <div class="format-emoji"><img src="img/icon-toast.svg" alt="" class="format-emoji-img" width="52" height="52" loading="lazy"></div>
+          <h3 class="format-title">Фуршет</h3>
+          <p class="format-text">Мы решили отказаться от классического банкета. Вас ждут лёгкие закуски, напитки и уютная атмосфера без длинных посиделок за столами.</p>
+        </div>
+        <div class="format-card">
+          <div class="format-emoji"><img src="img/icon-plate.svg" alt="" class="format-emoji-img" width="52" height="52" loading="lazy"></div>
+          <h3 class="format-title">Меню бара</h3>
+          <p class="format-text">Если проголодаетесь — в баре Stoy отличная кухня. Мы внесли депозит, и вы сможете заказать блюдо из основного меню бара.</p>
+          <p class="format-text format-ps">P.S. Мы рекомендуем хот-дог с рваной говядиной.</p>
+          <p class="format-text format-ps">P.P.S. Катя очень переживает, что кто-то останется голодным, пожалуйста, не стесняйтесь.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OPEN MIC ===== -->
+  <section id="open-mic" class="section section-yellow">
+    <div class="section-inner">
+      <div class="section-icon">
+        <img src="img/heart.svg" alt="" width="80" height="73" loading="lazy">
+      </div>
+      <h2 class="section-title">Открытый микрофон</h2>
+      <img src="img/divider.svg" alt="" class="section-divider" width="240" height="24" loading="lazy">
+      <div class="open-mic-content">
+        <p class="open-mic-text-lead">Нам очень важно, чтобы каждый гость чувствовал себя частью этого вечера. Поэтому мы приглашаем всех желающих принять участие в <strong>открытом микрофоне</strong>!</p>
+        <div class="open-mic-details">
+          <div class="open-mic-item">
+            <span class="open-mic-icon"><img src="img/icon-guitar.svg" alt="" width="28" height="28"></span>
+            <span>Спеть песню под гитару так, чтобы вам подпевал весь зал</span>
+          </div>
+          <div class="open-mic-item">
+            <span class="open-mic-icon"><img src="img/icon-toast.svg" alt="" width="28" height="28"></span>
+            <span>Сказать тост или вспомнить забавную историю о молодожёнах</span>
+          </div>
+          <div class="open-mic-item">
+            <span class="open-mic-icon"><img src="img/icon-theater.svg" alt="" width="28" height="28"></span>
+            <span>Поставить сценку или заранее снять видео</span>
+          </div>
+          <div class="open-mic-item">
+            <span class="open-mic-icon"><img src="img/icon-clipboard.svg" alt="" width="28" height="28"></span>
+            <span>Прочитать доклад о лайфхаках семейной жизни, жизни с айтишником и т.д.</span>
+          </div>
+          <div class="open-mic-item">
+            <span class="open-mic-icon"><img src="img/icon-bulb.svg" alt="" width="28" height="28"></span>
+            <span>Придумать любой номер, который вам кажется уместным и классным</span>
+          </div>
+        </div>
+        <p class="open-mic-cta">Друзья, мы очень ждём ваших номеров! Пожалуйста, <a href="#rsvp" class="open-mic-cta-link"><strong>отмечайте в форме подтверждения участия</strong></a>, если планируете выступить — чтобы мы успели всё организовать. Не стесняйтесь, будет душевно и весело!</p>
+        <p class="open-mic-footnote">* если у вас остались вопросы по формату открытого микрофона,<br>можно задать их тамаде Маше (тг: <a href="https://t.me/zavmashm" target="_blank" rel="noopener" class="tg-link">@zavmashm</a>)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section id="map" class="section section-pink">
+    <div class="section-inner">
+      <div class="section-icon">
+        <img src="img/pin.svg" alt="" width="45" height="60" loading="lazy">
+      </div>
+      <h2 class="section-title">Как добраться</h2>
+      <img src="img/divider.svg" alt="" class="section-divider" width="240" height="24" loading="lazy">
+      <div class="map-info">
+        <p class="map-address">
+          <span class="map-pin-icon">📍</span>
+          Валовая ул., 30, Москва (этаж 1)
+        </p>
+        <p class="map-hint">Бар Stoy — пешком 5 минут от метро <strong>Павелецкая</strong></p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=37.623573%2C55.728774%2C37.629573%2C55.731774&amp;layer=mapnik&amp;marker=55.730274%2C37.626573" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="map-open-link">
+        <a href="https://yandex.ru/maps/?text=%D0%92%D0%B0%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F+%D1%83%D0%BB.+30+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0+%D0%91%D0%B0%D1%80+Stoy" target="_blank" rel="noopener">Открыть в Яндекс.Картах →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== RSVP ===== -->
+  <section id="rsvp" class="section section-yellow">
+    <div class="section-inner">
+      <div class="section-icon">
+        <img src="img/squiggle.svg" alt="" width="60" height="30" loading="lazy">
+      </div>
+      <h2 class="section-title">Подтвердите присутствие</h2>
+      <img src="img/divider.svg" alt="" class="section-divider" width="240" height="24" loading="lazy">
+      <p class="rsvp-intro">Пожалуйста, дайте нам знать, сможете ли вы быть с нами в этот день. <br>Ответьте до <strong>20 июня 2026</strong>.</p>
+      <p class="rsvp-note">Мы знаем, что у многих наших друзей есть дети. К сожалению, барный формат не предполагает их участия в празднике. Надеемся, что они хорошо проведут время дома, а вы отдохнете)))</p>
+      
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD8n5wGFLhpk0G4GSrNUDw_baq168GlBsiQn7235CP8UnpOQ/viewform?embedded=true" width="100%" height="1400" loading="lazy" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: var(--radius);">Загрузка…</iframe>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="img/flower.svg" alt="" class="footer-flower" width="40" height="40" loading="lazy">
+      <p class="footer-names">Катя &amp; Паша Коршиковы</p>
+      <p class="footer-date">4 июля 2026 · Бар Stoy, Москва</p>
+      <div class="footer-hearts">
+        <img src="img/heart.svg" alt="" width="24" height="22" loading="lazy">
+        <img src="img/heart.svg" alt="" width="20" height="18" loading="lazy">
+        <img src="img/heart.svg" alt="" width="24" height="22" loading="lazy">
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1"></script>
+  <script src="js/main.js"></script>
+
+
+  <!-- Wedding march audio -->
+  <audio id="weddingAudio" loop preload="auto">
+    <source src="audio/wedding-march.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicToggle" class="music-btn" aria-label="Включить музыку" title="Свадебный марш">🎵</button>
+</body>
+</html>

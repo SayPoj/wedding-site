@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)" fill="none" stroke="#F5B700" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- bulb body -->
+    <path d="M30,8 Q22,8 22,16 Q22,28 26,32 L26,38 Q26,42 34,42 L34,38 Q38,32 38,16 Q38,8 30,8Z" fill="#FFD54F" fill-opacity="0.12" stroke="#F5B700"/>
+    <!-- base -->
+    <rect x="26" y="42" width="8" height="6" rx="2" stroke="#FF6B8A" stroke-width="2.5"/>
+    <line x1="28" y1="48" x2="32" y2="48" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- filament (simplified) -->
+    <path d="M28,30 Q30,26 32,30" stroke="#FF6B8A" stroke-width="1.5" opacity="0.4"/>
+    <!-- glow lines -->
+    <line x1="30" y1="4" x2="30" y2="2" stroke="#F5B700" stroke-width="1.5" opacity="0.4"/>
+    <line x1="42" y1="12" x2="44" y2="10" stroke="#F5B700" stroke-width="1.5" opacity="0.4"/>
+    <line x1="44" y1="24" x2="46" y2="24" stroke="#F5B700" stroke-width="1.5" opacity="0.4"/>
+    <line x1="18" y1="12" x2="16" y2="10" stroke="#F5B700" stroke-width="1.5" opacity="0.4"/>
+    <line x1="16" y1="24" x2="14" y2="24" stroke="#F5B700" stroke-width="1.5" opacity="0.4"/>
+    <!-- highlight -->
+    <ellipse cx="26" cy="16" rx="3" ry="2" fill="#FFF" opacity="0.2"/>
+  </g>
+</svg>

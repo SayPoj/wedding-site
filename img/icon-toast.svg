@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)" fill="none" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left glass -->
+    <path d="M18,10 L15,30 Q15,35 20,35 L25,35 Q30,35 30,30 L27,10Z"/>
+    <line x1="15" y1="35" x2="30" y2="35" stroke="#F5B700" stroke-width="2"/>
+    <!-- right glass -->
+    <path d="M33,10 L30,30 Q30,35 35,35 L40,35 Q45,35 45,30 L42,10Z"/>
+    <line x1="30" y1="35" x2="45" y2="35" stroke="#F5B700" stroke-width="2"/>
+    <!-- clink lines -->
+    <line x1="30" y1="30" x2="30" y2="20" stroke="#FF8FAB" stroke-width="1.5" opacity="0.5"/>
+    <!-- wine in left glass -->
+    <path d="M17,26 Q20,28 28,26" stroke="#F5B700" stroke-width="2" opacity="0.5"/>
+    <!-- wine in right glass -->
+    <path d="M32,26 Q35,28 43,26" stroke="#F5B700" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>

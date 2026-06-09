@@ -1,0 +1,16 @@
+{
+  "name": "wedding-site",
+  "version": "1.0.0",
+  "description": "Свадебный лендинг Кати и Паши — 4 июля 2026",
+  "private": true,
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1 -o",
+    "dev": "npx http-server . -p 3000 -c-1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

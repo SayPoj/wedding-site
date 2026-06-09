@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)">
+    <!-- petals -->
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#F5B700" opacity="0.6" transform="rotate(0,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#FFD54F" opacity="0.5" transform="rotate(45,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#F5B700" opacity="0.6" transform="rotate(90,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#FFD54F" opacity="0.5" transform="rotate(135,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#F5B700" opacity="0.6" transform="rotate(180,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#FFD54F" opacity="0.5" transform="rotate(225,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#F5B700" opacity="0.6" transform="rotate(270,50,50)"/>
+    <ellipse cx="50" cy="22" rx="10" ry="18" fill="#FFD54F" opacity="0.5" transform="rotate(315,50,50)"/>
+    <!-- center -->
+    <circle cx="50" cy="50" r="10" fill="#FF6B8A"/>
+    <circle cx="50" cy="50" r="6" fill="#FF8FAB"/>
+    <circle cx="48" cy="48" r="2" fill="#FFF" opacity="0.4"/>
+  </g>
+</svg>

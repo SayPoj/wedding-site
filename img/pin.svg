@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)">
+    <!-- pin body -->
+    <path d="M30,75 C20,52 5,38 5,23 C5,9 16,2 30,2 C44,2 55,9 55,23 C55,38 40,52 30,75Z" 
+          fill="#FF6B8A" stroke="#D94A6A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- inner circle -->
+    <circle cx="30" cy="23" r="9" fill="#FFF" opacity="0.85"/>
+    <circle cx="30" cy="23" r="5" fill="#F5B700"/>
+    <!-- highlight -->
+    <ellipse cx="26" cy="18" rx="3" ry="2" fill="#FFF" opacity="0.3" transform="rotate(-15,26,18)"/>
+  </g>
+</svg>

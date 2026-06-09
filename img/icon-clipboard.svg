@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  <g filter="url(#rough)" fill="none" stroke="#FF6B8A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- clipboard body -->
+    <rect x="16" y="10" width="28" height="44" rx="3" fill="#FFF5E6" fill-opacity="0.15"/>
+    <!-- clip top -->
+    <rect x="22" y="6" width="16" height="8" rx="2" stroke="#F5B700" stroke-width="2.5"/>
+    <line x1="30" y1="10" x2="30" y2="14" stroke="#F5B700" stroke-width="2"/>
+    <!-- paper lines -->
+    <line x1="20" y1="22" x2="40" y2="22" stroke="#FF8FAB" stroke-width="1.5" opacity="0.5"/>
+    <line x1="20" y1="30" x2="40" y2="30" stroke="#FF8FAB" stroke-width="1.5" opacity="0.5"/>
+    <line x1="20" y1="38" x2="40" y2="38" stroke="#FF8FAB" stroke-width="1.5" opacity="0.5"/>
+    <line x1="20" y1="46" x2="32" y2="46" stroke="#FF8FAB" stroke-width="1.5" opacity="0.5"/>
+    <!-- checkmark -->
+    <path d="M24,30 L28,34 L36,26" stroke="#F5B700" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>

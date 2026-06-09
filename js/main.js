@@ -233,4 +233,9 @@ if (typeof confetti !== 'undefined') {
     var touch = e.touches[0];
     if (touch) fireConfetti(touch.clientX, touch.clientY);
   });
+
+  document.addEventListener('touchmove', function (e) {
+    var touch = e.touches[0];
+    if (touch) fireConfetti(touch.clientX, touch.clientY);
+  });
 }

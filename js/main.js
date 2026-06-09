@@ -201,3 +201,36 @@ if (rsvpFrame) {
     }, 1500);
   });
 }
+
+// ---------- Cursor & touch confetti trail ----------
+if (typeof confetti !== 'undefined') {
+  var lastTime = 0;
+  var colors = ['#FF6B8A', '#F5B700', '#FFD54F', '#FF8FAB', '#FFF'];
+
+  function fireConfetti(x, y) {
+    var now = Date.now();
+    if (now - lastTime < 60) return;
+    lastTime = now;
+
+    confetti({
+      particleCount: 2,
+      spread: 25,
+      startVelocity: 18,
+      origin: { x: x / window.innerWidth, y: y / window.innerHeight },
+      colors: colors,
+      shapes: ['circle'],
+      scalar: 0.8,
+      gravity: 0.8,
+      drift: 0.3
+    });
+  }
+
+  document.addEventListener('mousemove', function (e) {
+    fireConfetti(e.clientX, e.clientY);
+  });
+
+  document.addEventListener('touchstart', function (e) {
+    var touch = e.touches[0];
+    if (touch) fireConfetti(touch.clientX, touch.clientY);
+  });
+}
